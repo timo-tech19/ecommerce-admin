@@ -7,6 +7,7 @@ export default async function SetupLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	// root '/' page redirects to the first store find by authenticated user
 	const { userId } = auth();
 
 	if (!userId) {
