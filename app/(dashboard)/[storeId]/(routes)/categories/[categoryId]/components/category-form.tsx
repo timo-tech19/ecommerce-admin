@@ -1,7 +1,7 @@
 "use client";
 import * as z from "zod";
 import { useState } from "react";
-import { Category, Billboard, Store } from "@prisma/client";
+import { Category, Billboard } from "@prisma/client";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
@@ -51,7 +51,6 @@ const CategoryForm: React.FC<CategoryFormProps> = ({
 	const [loading, setLoading] = useState(false);
 	const params = useParams();
 	const router = useRouter();
-	const origin = useOrigin();
 
 	const title = initialData ? "Edit category" : "Create Category";
 	const description = initialData ? "Edit a category" : "Add a new Category";
