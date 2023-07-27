@@ -102,6 +102,7 @@ export async function GET(
 				categoryId,
 				colorId,
 				sizeId,
+				isArchived: false,
 				isFeatured: isFeatured ? true : undefined, // undefine ignores this field
 			},
 			include: {
